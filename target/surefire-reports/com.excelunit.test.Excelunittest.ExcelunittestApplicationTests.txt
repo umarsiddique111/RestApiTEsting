@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.excelunit.test.Excelunittest.ExcelunittestApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 19.031 s <<< FAILURE! - in com.excelunit.test.Excelunittest.ExcelunittestApplicationTests
+postapitest(com.excelunit.test.Excelunittest.ExcelunittestApplicationTests)  Time elapsed: 2.622 s  <<< ERROR!
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8080/fileupload": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at com.excelunit.test.Excelunittest.ExcelunittestApplicationTests.postapitest(ExcelunittestApplicationTests.java:103)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.excelunit.test.Excelunittest.ExcelunittestApplicationTests.postapitest(ExcelunittestApplicationTests.java:103)
+
