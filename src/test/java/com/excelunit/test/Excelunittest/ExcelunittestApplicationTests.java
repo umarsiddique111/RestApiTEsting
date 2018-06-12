@@ -1,6 +1,7 @@
 package com.excelunit.test.Excelunittest;
 
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,15 +26,19 @@ import jxl.read.biff.BiffException;
 public class ExcelunittestApplicationTests {
 	
 	 
-	private final static String FilePath ="D:\\detail.xls";
+
 	@Test 
 	public void postapitest() throws IOException, BiffException  {
 	   
-	
-		
-		FileInputStream fs = new FileInputStream(FilePath);
+		File folder = new File("D:\\Excel-file");
+		 File[] listOfFiles = folder.listFiles();
+		 for (File file : listOfFiles) {
+		     if (file.isFile()) {
+		         System.out.println(file.getPath());
+		    
+		FileInputStream fs = new FileInputStream(file.getPath());   
 		Workbook wb = Workbook.getWorkbook(fs);
-
+      
 		// TO get the access to the sheet
 		Sheet sheet = wb.getSheet("Sheet1");
 	
@@ -103,7 +108,10 @@ public class ExcelunittestApplicationTests {
 							
 						       
 		 }
-		
+		    
+		     }
+		     }
+		 		
 		 }
 	}
 
